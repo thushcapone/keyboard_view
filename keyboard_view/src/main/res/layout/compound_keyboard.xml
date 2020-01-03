@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~  * Copyright (c) 2018. T.C.
+  ~  * All Rights Reserved
+  ~  *
+  ~  * This product is protected by copyright and distributed under
+  ~  * licenses restricting copying, distribution and decompilation.
+  ~  *
+  ~  */
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_1"
+            style="@style/KeyboardButton"
+            tools:text="1"
+            />
+
+        <Button
+            android:id="@+id/button_2"
+            style="@style/KeyboardButton"
+            tools:text="2"
+            />
+
+        <Button
+            android:id="@+id/button_3"
+            style="@style/KeyboardButton"
+            tools:text="3"
+            />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    
+        <Button
+            android:id="@+id/button_4"
+            style="@style/KeyboardButton"
+            tools:text="4"
+            />
+    
+        <Button
+            android:id="@+id/button_5"
+            style="@style/KeyboardButton"
+            tools:text="5"
+            />
+    
+        <Button
+            android:id="@+id/button_6"
+            style="@style/KeyboardButton"
+            tools:text="6"
+            />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_7"
+            style="@style/KeyboardButton"
+            tools:text="7"
+            />
+
+        <Button
+            android:id="@+id/button_8"
+            style="@style/KeyboardButton"
+            tools:text="8"
+            />
+
+        <Button
+            android:id="@+id/button_9"
+            style="@style/KeyboardButton"
+            tools:text="9"
+            />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    
+        <Button
+            style="@style/KeyboardButton"
+            android:visibility="invisible"
+            />
+    
+        <Button
+            android:id="@+id/button_0"
+            style="@style/KeyboardButton"
+            tools:text="0"
+            />
+    
+        <ImageButton
+            android:id="@+id/button_delete"
+            style="@style/KeyboardButton"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_backspace_grey"
+            />
+        
+    </LinearLayout>
+    
+</LinearLayout>

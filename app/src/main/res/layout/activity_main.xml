@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~  * Copyright (c) 2018. T.C.
+  ~  * All Rights Reserved
+  ~  *
+  ~  * This product is protected by copyright and distributed under
+  ~  * licenses restricting copying, distribution and decompilation.
+  ~  *
+  ~  */
+  -->
+<layout
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:gravity="center"
+            android:inputType="number"
+            android:textSize="@dimen/font_large"
+            app:keyboard="@{keyboard}"
+            app:test="@{String.valueOf(100)}"
+            />
+        
+        <com.thushcapone.keyboard_view.KeyboardView
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/spacing_huge"
+            android:layout_marginRight="@dimen/spacing_huge"
+            android:gravity="bottom"
+            app:shuffle="false"
+            app:keysColor="@color/colorPrimary"
+            />
+    
+    </LinearLayout>
+    
+</layout>

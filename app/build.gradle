@@ -33,8 +33,8 @@ dependencies {
     //Used for Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    //Used for custom edit text
-    implementation project(":keyboard_view")
+    //Used for custom keyboard
+    implementation 'com.github.thushcapone:keyboard_view:v1.0.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

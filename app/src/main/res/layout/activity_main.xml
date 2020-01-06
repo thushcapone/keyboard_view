@@ -29,7 +29,6 @@
             android:inputType="number"
             android:textSize="@dimen/font_large"
             app:keyboard="@{keyboard}"
-            app:test="@{String.valueOf(100)}"
             />
         
         <com.thushcapone.keyboard_view.KeyboardView

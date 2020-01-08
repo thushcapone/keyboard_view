@@ -23,6 +23,7 @@ import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputConnection
 import android.widget.*
 import androidx.databinding.BindingAdapter
+import com.google.android.material.textfield.TextInputEditText
 import com.thushcapone.keyboard_view.extensions.getColorFilterFromResourceId
 import com.thushcapone.keyboard_view.extensions.getColorFromResourceId
 import com.thushcapone.keyboard_view.extensions.hideKeyboard
@@ -157,7 +158,6 @@ fun setKeyboard(editText: EditText, keyboard: KeyboardView) {
 @SuppressLint("ClickableViewAccessibility")
 @BindingAdapter("keyboard", "validateAction")
 fun setKeyboard(editText: EditText, keyboard: KeyboardView, action: OnOkListener? = null) {
-    Log.e("keyb", "setting keyboard 123")
     editText.setOnTouchListener { v, event ->
         v.onTouchEvent(event)
         v.context.hideKeyboard(v)
@@ -176,6 +176,35 @@ fun setKeyboard(editText: EditText, keyboard: KeyboardView, action: OnOkListener
     keyboard.setInputConnection(ic)
     action?.let { keyboard.setListener(it) }
 }
+
+@BindingAdapter("keyboard")
+fun setKeyboard(editText: TextInputEditText, keyboard: KeyboardView) {
+    setKeyboard(editText, keyboard, null)
+}
+
+@SuppressLint("ClickableViewAccessibility")
+@BindingAdapter("keyboard", "validateAction")
+fun setKeyboard(editText: TextInputEditText, keyboard: KeyboardView, action: OnOkListener? = null) {
+    editText.setOnTouchListener { v, event ->
+        v.onTouchEvent(event)
+        v.context.hideKeyboard(v)
+        true
+    }
+    //editText.showSoftInputOnFocus = false
+    //DIRTY HACK 13/02/2019 : View should be focusable but when I set it to focusable, the keyboard is shown when I
+    // focus on the keyboard then put the app on background and come back on the foreground of the view
+    editText.isFocusable = false
+    //END OF DIRTY HACK
+    editText.setOnFocusChangeListener { v, _ ->
+        v.context.hideKeyboard(v)
+    }
+
+    val ic = editText.onCreateInputConnection(EditorInfo())
+    keyboard.setInputConnection(ic)
+    action?.let { keyboard.setListener(it) }
+}
+
+
 
 interface OnOkListener {
 

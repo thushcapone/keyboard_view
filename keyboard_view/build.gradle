@@ -48,11 +48,6 @@ dependencies {
     //Used for Kotlin
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    //Used for data binding
-    kapt 'com.android.databinding:compiler:3.1.4'
-
-    //Used for backward compatibility
-    api "androidx.appcompat:appcompat:$rootProject.ext.supportLibVersion"
     api "com.google.android.material:material:1.1.0-alpha04"
 
     testImplementation 'junit:junit:4.12'

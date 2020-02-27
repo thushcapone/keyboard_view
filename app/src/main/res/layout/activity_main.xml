@@ -39,7 +39,7 @@
             android:layout_marginLeft="@dimen/spacing_huge"
             android:layout_marginRight="@dimen/spacing_huge"
             android:gravity="bottom"
-            app:shuffle="false"
+            app:shuffle="true"
             app:keysColor="@color/colorPrimary"
             />
     

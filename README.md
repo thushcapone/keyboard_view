@@ -12,7 +12,7 @@ KeyboardView is your visual keyboard that is Android Architecture Component frie
 ## Adding to project  
   
 ### Gradle  
-Add below code to your **root** `build.gradle` file (if you have multiple modules and only one of them require `KKeyboardView`, add the `jitpack` url only in that module's `build.gradle`).  
+Add below code to your **root** `build.gradle` file (if you have multiple modules and only one of them require `KeyboardView`, add the `jitpack` url only in that module's `build.gradle`).  
 ```groovy  
 allprojects {  
  repositories { 
@@ -92,7 +92,7 @@ Table below describes the properties available to customize the KeyboardView.
 |------------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 | shuffle            | boolean     | Set if the keyboard keys are shuffled or not                              |  
 | keyboard            | reference | Links the keyboard to the editText |  
-| keysColor           | reference | Set the color of the keys based on the `color resource` |  
+| keysColor           | reference | Set the color of the keys based on the `color resource` provided |  
 | validateAction                | binding-function | Will be called when the enter button is hit |
 
 # License  
